@@ -72,10 +72,10 @@ word = 0
 wordcount = 0
 while wordcount < 1000:
     sylc2 = 0
-    sylc = random.randrange(2,8)
-    while sylc2 < sylc
-        syla = english_dict[random.randrange(0,59)]
-        word = word+str(syla)
+    sylc = random.randrange(1,4)
+    while sylc2 < sylc:
+        syla = '-'.join([english_dict[random.randrange(59)] for _ in range(random.randrange(1,4))])
+        word = str(word)+syla
         sylc2 = sylc2 + 1
     # shows it on the screen so you can laugh at it
     print str(word)
