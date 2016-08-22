@@ -68,19 +68,7 @@ english_dict = {
 }
 
 # this function grabs syllables from the dictionary and strings them together.
-word = 0
-wordcount = 0
-while wordcount < 1000:
-    sylc2 = 0
-    sylc = random.randrange(1,4)
-    while sylc2 < sylc:
-        syla = '-'.join([english_dict[random.randrange(59)] for _ in range(random.randrange(1,4))])
-        word = str(word)+syla
-        sylc2 = sylc2 + 1
-    # shows it on the screen so you can laugh at it
-    print str(word)
-    words.append(word)
-    wordcount = wordcount + 1
+words = [''.join([random.choice(english_dict) for _ in range(random.randint(2,8))]) for _ in range(1000)]
 # this part creates an output
 with open("TrillionNames" + str(RAND) + ".txt", "w") as text_file:
     text_file.write(str(words))
